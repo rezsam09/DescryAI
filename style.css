@@ -1,0 +1,48 @@
+:root{--slate:#22343f;--deep:#182731;--mist:#e6eef4;--sky:#8fb0c8;--steel:#5b7a90;--ink:#3b211c;--paper:#fbfdfe;--text:#1c2a33;--line:#d3e0e9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.7 Montserrat,system-ui,sans-serif;color:var(--text);background:var(--paper)}
+h1,h2,h3,nav{font-family:'Josefin Sans',system-ui,sans-serif}
+a{color:var(--steel)}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+header{position:sticky;top:0;z-index:5;background:rgba(251,253,254,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;flex-wrap:wrap;gap:8px}
+.brand{display:flex;align-items:center;gap:10px;font:700 1.35rem 'Josefin Sans',sans-serif;letter-spacing:.04em;text-decoration:none;color:var(--ink)}
+.brand img{height:36px;width:auto}
+nav a{margin-left:28px;text-decoration:none;font-size:1.1rem;color:var(--slate);padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current]{border-bottom-color:var(--steel)}
+main{max-width:980px;margin:0 auto;padding:56px 5vw 72px}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);letter-spacing:.03em;line-height:1.1;margin:0 0 .4em;color:var(--ink)}
+h2{font-size:1.9rem;font-weight:400;margin:2.2em 0 .6em;color:var(--slate)}
+h2:after{content:"";display:block;width:56px;height:3px;background:var(--steel);margin-top:.3em}
+main>h1+p{font-size:1.1rem}
+p{max-width:68ch}
+.hero{background:linear-gradient(135deg,var(--deep),var(--slate) 55%,#3f5d72);color:#fff;padding:88px 5vw 80px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;opacity:.18;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='300' viewBox='0 0 900 300' fill='none' stroke='white' stroke-width='1'%3E%3Cpath d='M0 150C150 60 300 240 450 150S750 60 900 150'/%3E%3Cpath d='M0 165C150 75 300 255 450 165S750 75 900 165'/%3E%3Cpath d='M0 180C150 90 300 270 450 180S750 90 900 180'/%3E%3Cpath d='M0 195C150 105 300 285 450 195S750 105 900 195'/%3E%3Cpath d='M0 210C150 120 300 300 450 210S750 120 900 210'/%3E%3C/svg%3E") center/cover no-repeat}
+.hero>div{max-width:980px;margin:0 auto;position:relative}
+.hero h1{color:#fff;font-size:clamp(3rem,9vw,5.5rem);margin-bottom:.25em}
+.def{font-size:1.1rem;border-left:3px solid var(--sky);padding-left:16px;margin:0 0 28px;color:#dbe7ef}
+.def small{display:block;opacity:.7}
+.hero p{font-size:1.15rem;color:#eaf1f6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.panel{background:#fff;border:1px solid var(--line);border-top:4px solid var(--slate);border-radius:6px;padding:24px 26px;margin:0}
+.panel h3{margin:0 0 .4em;font-size:1.3rem;color:var(--slate)}
+.panel p{margin:0;font-size:.97rem}
+.stack{display:grid;gap:16px}
+.btn{display:inline-block;background:#fff;color:var(--deep);padding:13px 26px;border-radius:4px;text-decoration:none;font-weight:600}
+.btn:hover{background:var(--mist)}
+ol.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line);margin-left:6px}
+ol.tl li{padding:0 0 22px 26px;position:relative}
+ol.tl li:before{content:"";position:absolute;left:-8px;top:7px;width:14px;height:14px;background:var(--paper);border:3px solid var(--steel);border-radius:50%}
+ol.tl b{display:block;font-family:'Josefin Sans',sans-serif;font-size:1.15rem;color:var(--slate)}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px 28px}
+.ph{width:160px;height:160px;background:linear-gradient(135deg,var(--steel),var(--sky));color:#fff;display:flex;align-items:center;justify-content:center;font:700 2.2rem 'Josefin Sans',sans-serif;border-radius:50%;position:relative;overflow:hidden;border:4px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.person h3{margin:.9em 0 .3em;font-size:1.25rem;color:var(--slate)}
+.person p{font-size:.93rem;margin:0}
+footer{background:var(--deep);color:#dbe7ef;padding:40px 5vw}
+footer div{max-width:980px;margin:0 auto}
+footer strong{font:700 1.35rem 'Josefin Sans',sans-serif;color:#fff;letter-spacing:.04em}
+footer p{margin:.35em 0}
+footer a{color:var(--sky)}
+@media(max-width:600px){nav a{margin:0 18px 0 0}.hero{padding:56px 5vw}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
